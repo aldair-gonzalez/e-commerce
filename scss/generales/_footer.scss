@@ -1,0 +1,89 @@
+.footer{
+    padding-bottom: 3rem;
+    width: 100%;
+    overflow: hidden;
+    .container-footer{
+        background: $negro-claro;
+        color: $blanco;
+        width: 100%;
+        margin: auto;
+        padding: 3rem;
+        @include grid(2,0);
+        .footer-list{
+            width: 100%;
+            @include grid(3,0);
+            .item-list{
+                .p{
+                    color: $blanco;
+                    font: {
+                        family: $tipo-titular;
+                        weight: 400;
+                        size: 2rem;
+                    }
+                }
+                .ul{
+                    .li{
+                        line-height: 1.7;
+                        .a{
+                            color: $gris-medio;
+                            transition: all .2s ease;
+                            font: {
+                                weight: 300;
+                                size: 1.5rem;
+                            }
+                            &:hover{
+                                color: $blanco-medio;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .footer-contact{
+            width: 100%;
+            .redes{
+                width: 100%;
+                .ul{
+                    width: 100%;
+                    @include flex(row,wrap,end,end);
+                    .li{
+                        margin: 1rem .5rem;
+                        .a{
+                            background: $blanco;
+                            color: $negro-5;
+                            font-size: 2rem;
+                            padding: 1rem 1.5rem;
+                            border-radius: 5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .line-footer{
+        background: $negro-claro;
+        color: $blanco;
+        margin: 1px 0;
+        .container-map{
+            width: 95%;
+            margin: auto;
+            @include flex(row,wrap,center,start);
+            .a{
+                font: {
+                    weight: 300;
+                    size: 1.5rem;
+                }
+                .icon{
+                    margin: .5rem;
+                }
+            }
+            .p{
+                margin: 0 2rem;
+                font: {
+                    weight: 300;
+                    size: 1.2rem;
+                }
+            }
+        }
+    }
+}

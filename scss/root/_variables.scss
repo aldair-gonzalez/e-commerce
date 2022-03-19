@@ -1,0 +1,61 @@
+/*
+// Colores principales
+*/
+$blanco: #FFFFFF;
+    $blanco-3: #ffffff4d;
+    $blanco-5: #ffffff80;
+    $blanco-8: #ffffffcc;
+$blanco-claro: #eff0f1;
+$blanco-medio: #EDEDED;
+
+$gris-claro: #D5D5D5;
+$gris: #A3A3A3;
+$gris-medio: #b0b3b8;
+$gris-oscuro: #7D7D7D;
+
+$negro: #000000;
+$negro-claro: #0C0C0C;
+$negro-medio: #0D0D0D;
+    $negro-3: #0d0d0d4d;
+    $negro-5: #0d0d0d80;
+    $negro-8: #0d0d0dcc;
+$negro-dark: #18191a;
+
+/*
+// Paleta de colores
+*/
+
+
+/*
+// maps para las redes sociales
+*/
+$redes: (
+    'facebook': #1877f2,
+    'instagram': #c13584,
+    'twitter': #1da1f2,
+    'whatsapp': #25d366,
+);
+@each $red,$color in $redes {
+    .#{$red} {
+        color: $color;
+    }
+}
+
+
+/*
+// Tipografias
+*/
+    // 
+    @import url('https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap');
+    // font-family: 'Antic Didone', serif;
+    $tipo-titular: 'Antic Didone', serif;
+    
+    // 
+    @import url('https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&display=swap');
+    // font-family: 'Corinthia', cursive;
+    $tipo-principal: 'Corinthia', cursive;
+
+    //
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+    // font-family: 'Quicksand', sans-serif;
+    $tipo-normal: 'Quicksand', sans-serif;

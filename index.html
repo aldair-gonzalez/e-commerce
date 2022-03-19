@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Compra Todo tipo de accesorios de moda Aldair">
+    <meta name="keywords" content="Aldair, moda, trajes, vestidos, reloj, perfumes, ropa, saco">
+    <title>Tienda de mùsica Aldair</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script defer src="https://kit.fontawesome.com/07bf2e6538.js" crossorigin="anonymous"></script>
+    <script defer src="js/menu.js"></script>
+    <script defer src="js/main.js"></script>
+    <script defer src="js/productos.js"></script>
+    <script defer src="js/pintarCards.js"></script>
+    <script defer src="js/filtrado.js"></script>
+    <script defer src="js/modalProducto.js"></script>
+    <script defer src="js/carrito.js"></script>
+    <script defer src="js/populares.js"></script>
+    <script defer src="js/cursor.js"></script>
+</head>
+<body>
+
+    <div id="inner-cursor"></div>
+    <div id="outer-cursor"></div>
+
+    <header class="header">
+        <nav class="nav-header">
+            <ul class="ul">
+                <li class="li"><a href="index.html" class="a">Inicio</a></li>
+                <li class="li"><a href="#" id="aProductos" class="a">Productos</a></li>
+                <li class="li"><button><i class="fas fa-shopping-bag" id="verCarrito"></i></button></li>
+            </ul>
+        </nav>
+        <div class="container-header">
+            <img src="img/background.webp" alt="" class="img">
+            <div class="info">
+                <div class="container-info">
+                    <h1 class="h1">Tienda de música Aldair</h1>
+                    <p class="slogan">A un paso de tus sueños</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section-carrito" id="sectionCarrito">
+        <div class="container-carrito">
+            <div class="header-carrito">
+                <div class="title">
+                    <h2 class="h2">Aldair</h2>
+                    <p class="frase">Vive la vida que amas. Ama la vida que vives</p>
+                    <div class="line"></div>
+                </div>
+                <div class="section-car">
+                    <p class="p">Estas comprando</p>
+                    <button class="btn-salir" id="cerrarCarrito"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+            <div class="carrito" id="container-cards-carrito">
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="section-novedades">
+        <div class="container-novedades">
+            <div class="title">
+                <h2 class="h2">Novedades</h2>
+            </div>
+            <div class="container-imagen">
+                <div class="imagen">
+                    <img src="img/concierto1.webp" alt="" class="img">
+                    <div class="info">
+                        <div class="container-info">
+                            <p class="p blanco">Gran concierto</p>
+                            <button class="btn-comprar">Ver mas</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="imagen">
+                    <img src="img/class.webp" alt="" class="img">
+                    <div class="info">
+                        <div class="container-info">
+                            <p class="p blanco">Clases de música</p>
+                            <button class="btn-comprar">Mas información</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section-tendencias">
+        <div class="container-tendencias">
+            <div class="title">
+                <h2 class="h2">Tendencias</h2>
+            </div>
+            <div class="container-imagen">
+                <div class="imagen">
+                    <img src="img/music-3.webp" alt="" class="img">
+                </div>
+                <div class="imagen">
+                    <img src="img/music-1.webp" alt="" class="img">
+                </div>
+                <div class="imagen">
+                    <img src="img/music-2.webp" alt="" class="img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-masDe" id="seccProductos">
+        <div class="container-masDe">
+            <div class="title">
+                <h2 class="h2">Nuestros Productos</h2>
+            </div>
+            <div class="container-imagen">
+                <div class="imagen">
+                    <img src="img/cat-guitar.webp" alt="" class="img">
+                    <div class="info">
+                        <div class="container-info">
+                            <p class="p">Guitarras</p>
+                            <button class="btn-verMas">Ver mas</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="imagen">
+                    <img src="img/cat-keyboard.webp" alt="" class="img">
+                    <div class="info">
+                        <div class="container-info">
+                            <p class="p">Teclados</p>
+                            <button class="btn-verMas">Ver mas</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="imagen">
+                    <img src="img/cat-drummer.webp" alt="" class="img">
+                    <div class="info">
+                        <div class="container-info">
+                            <p class="p">Baterias</p>
+                            <button class="btn-verMas">Ver mas</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="imagen">
+                    <img src="img/cat-microphone.webp" alt="" class="img">
+                    <div class="info">
+                        <div class="container-info">
+                            <p class="p negro">Microfonos</p>
+                            <button class="btn-verMas">Ver mas</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="imagen">
+                    <img src="img/cat-amplifier.webp" alt="" class="img">
+                    <div class="info">
+                        <div class="container-info">
+                            <p class="p negro">Amplificdores</p>
+                            <button class="btn-verMas">Ver mas</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="imagen">
+                    <img src="img/cat-mixer.webp" alt="" class="img">
+                    <div class="info">
+                        <div class="container-info">
+                            <p class="p negro">Mezcladoras</p>
+                            <button class="btn-verMas">Ver mas</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="imagen">
+                    <img src="img/cat-pedal.webp" alt="" class="img">
+                    <div class="info">
+                        <div class="container-info">
+                            <p class="p negro">Pedales</p>
+                            <button class="btn-verMas">Ver mas</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="imagen">
+                    <img src="img/cat-bass.webp" alt="" class="img">
+                    <div class="info">
+                        <div class="container-info">
+                            <p class="p negro">Bajos</p>
+                            <button class="btn-verMas">Ver mas</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-categorias" iD="seccCategorias">
+        <div class="container-categorias">
+            <div class="title">
+                <a href="index.html" class="h2">Aldair</a>
+                <p class="frase">Pasión por la música</p>
+                <div class="line"></div>
+            </div>
+            <div class="header-categorias">
+                <p class="p">Nuestros Productos</p> 
+                <button class="btn-salir" id="exitCategorias"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="categorias">
+                <div class="container-filter">
+                    <div class="filter">
+                        <div class="title">
+                            <p class="p">Filtrar por...</p>
+                        </div>
+                        <div class="acordeon" id="filtroCategoria">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="container-cards">
+                    <div class="cards" id="cards">
+                        <!-- cards de productos -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-modalProducto" id="modalProducto">
+        <div class="container-modal">
+            <div class="header-modal">
+                <div class="title">
+                    <h2 class="h2">Aldair</h2>
+                    <div class="line"></div>
+                </div>
+                <div class="section-mod">
+                    <p class="p">Estas viendo</p>
+                    <button class="btn-salir" id="cerrarModal"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+            <div class="container-producto">
+                <div class="imagen">
+                    <img src="" alt="" class="img" id="img-modal">
+                </div>
+                <div class="container-info">
+                    <div class="info">
+                        <h2 class="nombre" id="nombre-productoModal">Producto 0000</h2>
+                        <div class="valoracion">
+                            <span class="star   activo"><i class="fas fa-star"></i></span>
+                            <span class="star   activo"><i class="fas fa-star"></i></span>
+                            <span class="star   activo"><i class="fas fa-star"></i></span>
+                            <span class="star   activo"><i class="fas fa-star"></i></span>
+                            <span class="star         "><i class="fas fa-star"></i></span>
+                        </div>
+                        <p class="precio">$<span id="precio-productoModal">000000</span><span class="moneda">MXN</span></p>
+                        <div class="buttons">
+                            <button class="button carrito btn-addCarrito">Añadir al carrito</button>
+                            <button class="button comprar">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-descripcion">
+                    <div class="descripcion">
+                        <div class="title">
+                            <h3 class="h3"><span class="icon"><i class="fas fa-clipboard-list"></i></span> Descipcion</h3>
+                            <div class="line"></div>
+                        </div>
+                        <div class="desc">
+                            <p class="p" id="descripcionModal">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum aliquid dolor nam laborum error? Quisquam architecto porro, dolorum vero nesciunt molestiae modi ex, ipsam tempore earum ad commodi expedita? Deserunt totam possimus eveniet voluptate, expedita asperiores, voluptatem ipsam exercitationem facere, ipsum illo accusantium quis provident!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-pago">
+                    <div class="metodo-pago">
+                        <div class="title">
+                            <h3 class="h3"><span class="icon"><i class="fas fa-clipboard-list"></i></span> Formas de pago</h3>
+                            <div class="line"></div>
+                        </div>
+                        <div class="container-items">
+                            <div class="item"><img loading="lazy" src="img/visa.svg" alt="visa" class="img"></div>
+                            <div class="item"><img loading="lazy" src="img/paypal.webp" alt="paypal" class="img"></div>
+                            <div class="item"><img loading="lazy" src="img/mastercard.webp" alt="mastercard" class="img"></div>
+                            <div class="item"><img loading="lazy" src="img/mercadoPago.webp" alt="mercadoPago" class="img"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-prox">
+        <div class="container-prox">
+            <div class="title">
+                <h2 class="h2">Próximamente...</h2>
+            </div>
+            <div class="container-imagen">
+                <div class="imagen">
+                    <img src="img/new-show.webp" alt="" class="img">
+                    <div class="info">
+                        <p class="p blanco">Concursos</p>
+                    </div>
+                </div>
+                <div class="imagen">
+                    <img src="img/new-app.webp" alt="" class="img">
+                    <div class="info">
+                        <p class="p blanco">App Music</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-frase">
+        <div class="container-frase">
+            <h2 class="h2">Es tu momento de brillar</h2>
+            <p class="p">La felicidad no ocurre por casualidad, sino por elección</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container-footer">
+            <div class="footer-list">
+                <div class="item-list">
+                    <p class="p">Buscar en Tienda</p>
+                    <ul class="ul">
+                        <li class="li"><a href="#" class="a">Regístrate</a></li>
+                        <li class="li"><a href="#" class="a">Hazte miembro</a></li>
+                        <li class="li"><a href="#" class="a">Envíanos tus comentarios</a></li>
+                    </ul>
+                </div>
+                <div class="item-list">
+                    <p class="p">Obtener Ayuda</p>
+                    <ul class="ul">
+                        <li class="li"><a href="#" class="a">Estado del pedido</a></li>
+                        <li class="li"><a href="#" class="a">Envío y entrega</a></li>
+                        <li class="li"><a href="#" class="a">Devoluciones</a></li>
+                        <li class="li"><a href="#" class="a">Opciones de pago</a></li>
+                        <li class="li"><a href="#" class="a">Contáctanos</a></li>
+                    </ul>
+                </div>
+                <div class="item-list">
+                    <p class="p">Acerca de Aldair</p>
+                    <ul class="ul">
+                        <li class="li"><a href="#" class="a">Noticias</a></li>
+                        <li class="li"><a href="#" class="a">Empleo</a></li>
+                        <li class="li"><a href="#" class="a">Inversionistas</a></li>
+                        <li class="li"><a href="#" class="a">Sustentabilidad</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <div class="redes">
+                    <ul class="ul">
+                        <li class="li"><a href="#" title="facebook" class="a"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="li"><a href="#" title="instagram" class="a"><i class="fab fa-instagram"></i></a></li>
+                        <li class="li"><a href="#" title="twitter" class="a"><i class="fab fa-twitter"></i></a></li>
+                        <li class="li"><a href="#" title="whatsapp" class="a"><i class="fab fa-whatsapp"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="line-footer">
+            <div class="container-map">
+                <a href="#" class="a"><span class="icon"><i class="fas fa-map-marker-alt"></i></span>México</a>
+                <p class="p">© 2022 Aldair | Tienda de moda online Aldair | Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

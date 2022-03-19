@@ -1,0 +1,310 @@
+.section-novedades{
+    background: $blanco;
+    width: 100%;
+    padding-top: 5rem;
+    overflow: hidden;
+    .container-novedades{
+        width: 95%;
+        margin: auto;
+        .title{
+            font: {
+                family: $tipo-titular;
+                weight: 500;
+                size: 2.5rem;
+            }
+            .h2{
+                padding: 2rem;
+                color: $negro-claro;
+            }
+        }
+        .container-imagen{
+            @include grid(2,0);
+            .imagen{
+                width: 100%;
+                height: 35rem;
+                overflow: hidden;
+                position: relative;
+                .img{
+                    object-fit: cover;
+                    opacity: 1;
+                    transition: opacity .5s ease-in-out;
+                }
+                .info{
+                    background: $negro-3;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    @include flex(column,wrap,start,end);
+                    .container-info{
+                        width: 100%;
+                        height: 35%;
+                        padding: 2rem;
+                        .p{
+                            font: {
+                                family: $tipo-principal;
+                                weight: 700;
+                                size: 4rem;
+                            }
+                            &.negro{
+                                color: $negro-claro;
+                            }
+                            &.blanco{
+                                color: $blanco;
+                            }
+                        }
+                        .btn-comprar{
+                            background: $blanco;
+                            color: $negro;
+                            margin: .5rem;
+                            padding: .7rem 1.7rem;
+                            border-radius: 5rem;
+                            cursor: none;
+                            box-shadow: 1px 1px 1px $blanco-medio;
+                            font: {
+                                weight: 300;
+                                size: 1.6rem;
+                            }
+                            transition: background .2s ease;
+                            &:hover{
+                                background: $blanco-medio;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.section-tendencias{
+    background: $blanco;
+    width: 100%;
+    padding-top: 5rem;
+    overflow: hidden;
+    .container-tendencias{
+        width: 95%;
+        margin: auto;
+        .title{
+            font: {
+                family: $tipo-titular;
+                weight: 500;
+                size: 2.5rem;
+            }
+            .h2{
+                padding: 2rem;
+                color: $negro-claro;
+            }
+        }
+        .container-imagen{
+            @include grid(3,0);
+            .imagen{
+                width: 100%;
+                height: 55rem;
+                .img{
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+
+.section-masDe{
+    background: $blanco;
+    width: 100%;
+    padding-top: 5rem;
+    overflow: hidden;
+    .container-masDe{
+        width: 95%;
+        margin: auto;
+        .title{
+            font: {
+                family: $tipo-titular;
+                weight: 500;
+                size: 2.5rem;
+            }
+            .h2{
+                padding: 2rem;
+                color: $negro-claro;
+            }
+        }
+        .container-imagen{
+            @include grid(4,0);
+            .imagen{
+                width: 100%;
+                height: 50rem;
+                overflow: hidden;
+                position: relative;
+                &:hover{
+                    .info{
+                        background: $negro-3; 
+                    }
+                }
+                .img{
+                    object-fit: cover;
+                    opacity: 1;
+                    
+                }
+                .info{
+                    background: $negro-5;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    @include flex(row,wrap,end,start);
+                    transition: background .2s ease;
+                    .container-info{
+                        width: 100%;
+                        height: 30%;
+                        padding: 2rem;
+                        @include flex(column,wrap,start,center);
+                        .p{
+                            color: $blanco;
+                            font: {
+                                family: $tipo-principal;
+                                weight: 700;
+                                size: 4rem;
+                            }
+                        }
+                        .btn-verMas{
+                            background: $blanco;
+                            color: $negro-claro;
+                            margin: .5rem;
+                            padding: .7rem 1.7rem;
+                            border-radius: 5rem;
+                            cursor: none;
+                            box-shadow: 1px 1px 1px $blanco-medio;
+                            font: {
+                                weight: 400;
+                                size: 1.6rem;
+                            }
+                            transition: background .2s ease;
+                            &:hover{
+                                background: $blanco-medio;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.section-prox{
+    background: $blanco;
+    width: 100%;
+    padding-top: 5rem;
+    overflow: hidden;
+    position: relative;
+    .container-prox{
+        width: 95%;
+        margin: auto;
+        .title{
+            font: {
+                family: $tipo-titular;
+                weight: 500;
+                size: 2.5rem;
+            }
+            .h2{
+                padding: 2rem;
+                color: $negro-claro;
+            }
+        }
+        .container-imagen{
+            @include grid(2,0);
+            .imagen{
+                width: 100%;
+                height: 35rem;
+                overflow: hidden;
+                position: relative;
+                .img{
+                    object-fit: cover;
+                }
+                .info{
+                    background: $negro-3;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    @include flex(column,wrap,start,end);
+                    .p{
+                        padding: 2rem;
+                        font: {
+                            family: $tipo-principal;
+                            weight: 700;
+                            size: 6rem;
+                        }
+                        &.negro{
+                            color: $negro-claro;
+                        }
+                        &.blanco{
+                            color: $blanco;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.section-frase{
+    background: $blanco;
+    width: 100%;
+    overflow: hidden;
+    .container-frase{
+        width: 95%;
+        margin: auto;
+        height: 40rem;
+        @include flex(column,wrap,center,center);
+        .h2{
+            color: $gris-oscuro;
+            font: {
+                family: $tipo-principal;
+                weight: 700;
+                size: 10rem;
+            }
+        }
+        .p{
+            color: $gris-oscuro;
+            font: {
+                family: $tipo-titular;
+                weight: 300;
+                size: 3rem;
+            }
+        }
+    }
+}
+
+#inner-cursor{
+    position: fixed;
+    z-index: 999;
+    left: 1rem;
+    width: 1rem;
+    height: 1rem;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: width .5s, height .5s;
+    &.grow{
+        width: 4.5rem;
+        height: 4.5rem;
+        transition: width .5s, height .5s;
+    }
+}
+#outer-cursor{
+    position: fixed;
+    z-index: 999;
+    left: 2rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    transform: translate(-50%, -50%);
+    border: solid 2px #FFFEDF;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: .2s;
+}

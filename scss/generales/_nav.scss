@@ -1,0 +1,86 @@
+.nav-header{
+    background: $blanco-8;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    padding: 2rem;
+    border-bottom-left-radius: 2rem;
+    .ul{
+        @include flex(row,wrap,center,center);
+        .li{
+            .a{
+                color: $negro-claro;
+                margin: 0 1rem;
+                font: {
+                    family: $tipo-titular;
+                    weight: 300;
+                    size: 2rem;
+                }
+                border-bottom: solid 2px transparent;
+                transition: border .2s ease;
+                &:hover{
+                    border-bottom: solid 2px $gris-oscuro;
+                }
+            }
+            i{
+                color: $negro-claro;
+                font-size: 2.5rem;
+                padding: .5rem;
+                cursor: none;
+                transition: color .2s ease;
+                &:hover{
+                    color: $gris-oscuro;
+                }
+            }
+        }
+    }
+}
+.header{
+    background: $blanco;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    @include flex(column,wrap,center,center);
+    .container-header{
+        width: 95%;
+        height: 90%;
+        position: relative;
+        .img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 1;
+        }
+        .info{
+            background: $negro-5;
+            color: $blanco;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            @include flex(column,wrap,center,center);
+            .container-info{
+                text-align: center;
+                padding: 2rem 10rem;
+                .h1{
+                    font: {
+                        family: $tipo-titular;
+                        weight: 300;
+                        size: 4rem;
+                    }
+                }
+                .slogan{
+                    font: {
+                        family: $tipo-principal;
+                        weight: 300;
+                        size: 5.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

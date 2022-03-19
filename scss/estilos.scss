@@ -1,0 +1,15 @@
+// Importando el reseteo general de la pagina
+@import 
+        'root/variables','root/mixin','root/root';
+
+@import 'generales/nav','generales/footer','generales/carrito','generales/modalProducto';
+
+@import 'styles/index','styles/productos';
+
+@import 'styles/generales/cards';
+
+
+.section{
+        width: 100%;
+        height: 100vh;
+}
