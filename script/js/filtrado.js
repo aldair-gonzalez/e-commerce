@@ -2,8 +2,15 @@ const filtroCategoria = document.getElementById('filtroCategoria');
 filtrado();
 function filtrado(){
     filtroCategoria.innerHTML = "";
-    let categoria = arrProductos.map(producto => producto.categoria);
-    pintarFiltro(sinRepetir(categoria));
+
+
+    fetch('script/json/api.json')
+    .then((respuesta) => {
+        return respuesta.json();
+    }).then(data => {
+        let categoria = data.map(producto => producto.categoria);
+        pintarFiltro(sinRepetir(categoria));
+    })
 }
 
 function pintarFiltro(categoria){

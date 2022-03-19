@@ -16,5 +16,5 @@ function populares(){
 }
 
 function pintarPop(populares){
-    console.log(populares);
+    // console.log(populares);
 }
