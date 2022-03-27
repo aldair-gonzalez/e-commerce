@@ -7,11 +7,12 @@
     overflow: hidden;
     position: fixed;
     z-index: 15;
-    @include flex(column,wrap,center,center);
+    @include flex(row,wrap,center,center);
     transform: translateY(-2%);
     pointer-events: none;
     opacity: 0;
     transition: all 1s ease;
+    overflow: scroll;
     &.active-carrito{
         transform: translateY(0);
         pointer-events: all;
@@ -19,12 +20,11 @@
     }
     .container-carrito{
         width: 95%;
-        height: 90%;
         margin: auto;
-        overflow: scroll;
         .header-carrito{
             .title{
                 @include flex(column,wrap,center,center);
+                padding-top: 2rem;
                 .h2{
                     color: $gris-oscuro;
                     font: {
@@ -75,7 +75,7 @@
             padding: 2rem;
             .vacio{
                 width: 100%;
-                height: 35rem;
+                height: 45vh;
                 @include flex(column,wrap,center,center);
                 .p{
                     font: {
@@ -87,6 +87,7 @@
             }
             .producto-car{
                 background: $blanco;
+                position: relative;
                 width: 100%;
                 height: 15rem;
                 margin: .5rem 0;
@@ -124,6 +125,7 @@
                         border-radius: .3rem;
                         box-shadow: 0 0 3px $gris-claro;
                         transition: box-shadow .2s ease;
+                        cursor: none;
                         &:hover{
                             &.remove{
                                 box-shadow: 0 0 5px #149CD9;
@@ -162,6 +164,80 @@
                         &.subtotal{
                             border-bottom: solid 2px #7740B7;
                         }
+                    }
+                }
+                .delete{
+                    color: #ff0000;
+                    position: absolute;
+                    top: 1rem;
+                    right: 1rem;
+                    font-size: 2rem;
+                    cursor: none;
+                }
+            }
+        }
+        .footer-carrito{
+            padding: 3rem 0;
+            display: none;
+            &.active{
+                display: block;
+            }
+            .container-footer-carrito{
+                width: 95%;
+                margin: auto;
+                @include grid(2,0);
+                .container-cantidad{
+                    @include flex(row,wrap,center,center);
+                    .p{
+                        font: {
+                            weight: 300;
+                            size: 2.5rem;
+                        }
+                        .span{
+                            font: {
+                                weight: 300;
+                                size: 3rem;
+                            }
+                        }
+                    }
+                }
+                .container-total{
+                    @include flex(row,wrap,center,center);
+                    .info{
+                        text-shadow: 1px 1px 1px #7740B7;
+                        font: {
+                            weight: 300;
+                            size: 3rem;
+                        }
+                        #total{
+                            color: $gris-oscuro;
+                            font: {
+                                weight: 300;
+                                size: 3.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .buttons{
+                width: 100%;
+                padding-top: 3rem;
+                @include flex(row,wrap,center,flex-end);
+                .button{
+                    color: $blanco;
+                    width: 25%;
+                    margin: .2rem;
+                    padding: 1.5rem;
+                    border-radius: .3rem;
+                    font: {
+                        weight: 500;
+                        size: 1.7rem;
+                    }
+                    &.button1{
+                        background: #7740B7;
+                    }
+                    &.button2{
+                        background: #149CD9;
                     }
                 }
             }

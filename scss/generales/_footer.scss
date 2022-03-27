@@ -9,6 +9,9 @@
         margin: auto;
         padding: 3rem;
         @include grid(2,0);
+        &.car{
+            background: $blanco-claro;
+        }
         .footer-list{
             width: 100%;
             @include grid(3,0);
@@ -19,6 +22,9 @@
                         family: $tipo-titular;
                         weight: 400;
                         size: 2rem;
+                    }
+                    &.car{
+                        color: $negro;
                     }
                 }
                 .ul{
@@ -33,6 +39,9 @@
                             }
                             &:hover{
                                 color: $blanco-medio;
+                            }
+                            &.car{
+                                color: $negro-claro;
                             }
                         }
                     }
@@ -61,9 +70,12 @@
         }
     }
     .line-footer{
-        background: $negro-claro;
-        color: $blanco;
+        background: $blanco-claro;
+        color: $negro-claro;
         margin: 1px 0;
+        &.car{
+            background: $blanco;
+        }
         .container-map{
             width: 95%;
             margin: auto;

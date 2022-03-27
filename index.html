@@ -4,22 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Compra Todo tipo de accesorios de moda Aldair">
-    <meta name="keywords" content="Aldair, moda, trajes, vestidos, reloj, perfumes, ropa, saco">
+    <meta name="description" content="Aldair... nuestra pasión por la música">
+    <meta name="keywords" content="Aldair,musica,guitarras,bajos,teclados,baterias,microfonos,amplificadores,mezcladoras,pedales,multiefectos,analogos,BOSS,fender,yamaha,delay,booster,distorsion,reverb,chorus,overdrive,drive">
+    <meta name="theme-color" content="#ffffff"/>
+    <meta name="msapplication-navbutton-color" content="#ffffff"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="#ffffff"/>
+    <meta name="author" content="Aldair">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="google" content="notranslate">
     <title>Tienda de mùsica Aldair</title>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="css/estilos.css">
-    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <script defer src="https://kit.fontawesome.com/07bf2e6538.js" crossorigin="anonymous"></script>
-    <script defer src="script/js/menu.js"></script>
-    <script defer src="script/js/main.js"></script>
-    <script defer src="script/js/productos.js"></script>
-    <script defer src="script/js/pintarCards.js"></script>
-    <script defer src="script/js/filtrado.js"></script>
-    <script defer src="script/js/modalProducto.js"></script>
-    <script defer src="script/js/carrito.js"></script>
-    <script defer src="script/js/populares.js"></script>
-    <script defer src="script/js/cursor.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://kit.fontawesome.com/07bf2e6538.js" crossorigin="anonymous"></script>
+    <script defer src="script/js/index-min.js"></script>
 </head>
 <body>
 
@@ -31,7 +30,7 @@
             <ul class="ul">
                 <li class="li"><a href="index.html" class="a">Inicio</a></li>
                 <li class="li"><a href="#" id="aProductos" class="a">Productos</a></li>
-                <li class="li"><button><i class="fas fa-shopping-bag" id="verCarrito"><span id="cntdCar">0</span></i></button></li>
+                <li class="li"><button><i class="fab fa-opencart" title="Mi carrito" id="verCarrito"><span id="cntdCar">0</span></i></button></li>
             </ul>
         </nav>
         <div class="container-header">
@@ -55,12 +54,86 @@
                 </div>
                 <div class="section-car">
                     <p class="p">Estas comprando</p>
-                    <button class="btn-salir" id="cerrarCarrito"><i class="fas fa-times"></i></button>
+                    <button class="btn-salir" title="Cerrar carrito" id="cerrarCarrito"><i class="fas fa-times"></i></button>
                 </div>
             </div>
             <div class="carrito" id="container-cards-carrito">
                 
             </div>
+            <div class="footer-carrito" id="footer-carrito">
+                <div class="container-footer-carrito">
+                    <div class="container-cantidad">
+                        <p class="p">Total de artículos: <span class="span" id="cantidad-footerCarrito">000</span></p>
+                    </div>
+                    <div class="container-total">
+                        <p class="info">Precio total: $<span id="total-footerCarrito">000</span></p>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button class="button button1" id="vaciarCarrito">Vaciar carrito</button>
+                    <button class="button button2">Continuar Compra</button>
+                </div>
+            </div>
+
+            <section class="popularesCarrito">
+                <div class="title">
+                    <h3 class="h3">También te puede interesar</h3>
+                    <div class="line"></div>
+                </div>
+                <div class="cardsPop" id="container-cards-populares">
+
+                </div>
+            </section>
+
+            <section class="footer">
+                <div class="container-footer car">
+                    <div class="footer-list">
+                        <div class="item-list">
+                            <p class="p car">Buscar en Tienda</p>
+                            <ul class="ul">
+                                <li class="li"><a href="#" class="a car">Regístrate</a></li>
+                                <li class="li"><a href="#" class="a car">Hazte miembro</a></li>
+                                <li class="li"><a href="#" class="a car">Envíanos tus comentarios</a></li>
+                            </ul>
+                        </div>
+                        <div class="item-list">
+                            <p class="p car">Obtener Ayuda</p>
+                            <ul class="ul">
+                                <li class="li"><a href="#" class="a car">Estado del pedido</a></li>
+                                <li class="li"><a href="#" class="a car">Envío y entrega</a></li>
+                                <li class="li"><a href="#" class="a car">Devoluciones</a></li>
+                                <li class="li"><a href="#" class="a car">Opciones de pago</a></li>
+                                <li class="li"><a href="#" class="a car">Contáctanos</a></li>
+                            </ul>
+                        </div>
+                        <div class="item-list">
+                            <p class="p car">Acerca de Aldair</p>
+                            <ul class="ul">
+                                <li class="li"><a href="#" class="a car">Noticias</a></li>
+                                <li class="li"><a href="#" class="a car">Empleo</a></li>
+                                <li class="li"><a href="#" class="a car">Inversionistas</a></li>
+                                <li class="li"><a href="#" class="a car">Sustentabilidad</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-contact">
+                        <div class="redes">
+                            <ul class="ul">
+                                <li class="li"><a href="#" title="facebook" class="a"><i class="fab fa-facebook-f"></i></a></li>
+                                <li class="li"><a href="#" title="instagram" class="a"><i class="fab fa-instagram"></i></a></li>
+                                <li class="li"><a href="#" title="twitter" class="a"><i class="fab fa-twitter"></i></a></li>
+                                <li class="li"><a href="#" title="whatsapp" class="a"><i class="fab fa-whatsapp"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="line-footer car">
+                    <div class="container-map">
+                        <a href="#" class="a"><span class="icon"><i class="fas fa-map-marker-alt"></i></span>México</a>
+                        <p class="p">© 2022 Aldair | Tienda de moda online Aldair | Todos los derechos reservados</p>
+                    </div>
+                </div>
+            </section>
         </div>
     </section>
 
@@ -202,7 +275,7 @@
             </div>
             <div class="header-categorias">
                 <p class="p">Nuestros Productos</p> 
-                <button class="btn-salir" id="exitCategorias"><i class="fas fa-times"></i></button>
+                <button class="btn-salir" title="Salir" id="exitCategorias"><i class="fas fa-times"></i></button>
             </div>
             <div class="categorias">
                 <div class="container-filter">
@@ -233,7 +306,7 @@
                 </div>
                 <div class="section-mod">
                     <p class="p">Estas viendo</p>
-                    <button class="btn-salir" id="cerrarModal"><i class="fas fa-times"></i></button>
+                    <button class="btn-salir" title="Salir" id="cerrarModal"><i class="fas fa-times"></i></button>
                 </div>
             </div>
             <div class="container-producto">
@@ -283,6 +356,64 @@
                     </div>
                 </div>
             </div>
+            <section class="popularesCarrito">
+                <div class="title">
+                    <h3 class="h3">También te puede interesar</h3>
+                    <div class="line"></div>
+                </div>
+                <div class="cardsPop" id="container-pop-modal">
+
+                </div>
+            </section>
+            <section class="footer">
+                <div class="container-footer car">
+                    <div class="footer-list">
+                        <div class="item-list">
+                            <p class="p car">Buscar en Tienda</p>
+                            <ul class="ul">
+                                <li class="li"><a href="#" class="a car">Regístrate</a></li>
+                                <li class="li"><a href="#" class="a car">Hazte miembro</a></li>
+                                <li class="li"><a href="#" class="a car">Envíanos tus comentarios</a></li>
+                            </ul>
+                        </div>
+                        <div class="item-list">
+                            <p class="p car">Obtener Ayuda</p>
+                            <ul class="ul">
+                                <li class="li"><a href="#" class="a car">Estado del pedido</a></li>
+                                <li class="li"><a href="#" class="a car">Envío y entrega</a></li>
+                                <li class="li"><a href="#" class="a car">Devoluciones</a></li>
+                                <li class="li"><a href="#" class="a car">Opciones de pago</a></li>
+                                <li class="li"><a href="#" class="a car">Contáctanos</a></li>
+                            </ul>
+                        </div>
+                        <div class="item-list">
+                            <p class="p car">Acerca de Aldair</p>
+                            <ul class="ul">
+                                <li class="li"><a href="#" class="a car">Noticias</a></li>
+                                <li class="li"><a href="#" class="a car">Empleo</a></li>
+                                <li class="li"><a href="#" class="a car">Inversionistas</a></li>
+                                <li class="li"><a href="#" class="a car">Sustentabilidad</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-contact">
+                        <div class="redes">
+                            <ul class="ul">
+                                <li class="li"><a href="#" title="facebook" class="a"><i class="fab fa-facebook-f"></i></a></li>
+                                <li class="li"><a href="#" title="instagram" class="a"><i class="fab fa-instagram"></i></a></li>
+                                <li class="li"><a href="#" title="twitter" class="a"><i class="fab fa-twitter"></i></a></li>
+                                <li class="li"><a href="#" title="whatsapp" class="a"><i class="fab fa-whatsapp"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="line-footer car">
+                    <div class="container-map">
+                        <a href="#" class="a"><span class="icon"><i class="fas fa-map-marker-alt"></i></span>México</a>
+                        <p class="p">© 2022 Aldair | Tienda de moda online Aldair | Todos los derechos reservados</p>
+                    </div>
+                </div>
+            </section>
         </div>
     </section>
 
@@ -360,7 +491,7 @@
         <div class="line-footer">
             <div class="container-map">
                 <a href="#" class="a"><span class="icon"><i class="fas fa-map-marker-alt"></i></span>México</a>
-                <p class="p">© 2022 Aldair | Tienda de moda online Aldair | Todos los derechos reservados</p>
+                <p class="p">© 2022 Aldair | Tienda de música online Aldair | Todos los derechos reservados</p>
             </div>
         </div>
     </footer>
