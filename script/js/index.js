@@ -1,6 +1,7 @@
 const verCarrito = document.getElementById('verCarrito');
 const cerrarCarrito = document.getElementById('cerrarCarrito');
 const sectionCarrito = document.getElementById('sectionCarrito');
+const loader = document.getElementById('loader');
 
 verCarrito.addEventListener('click', () => {
     sectionCarrito.classList.add('active-carrito');
@@ -99,7 +100,8 @@ const peticion = async () => {
         for (const producto of data) {
             arrProductos.push(new Producto(producto.producto,producto.id,producto.precio,producto.imagen,producto.categoria,producto.subCategoria,producto.ventas,producto.info))
         }
-        pintarCards(arrProductos,cards);
+        await pintarCards(arrProductos,cards);
+        loader.classList.add('active');
     } catch (error) {
         console.error(error);
     }
