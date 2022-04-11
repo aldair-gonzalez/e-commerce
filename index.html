@@ -85,7 +85,7 @@
                 </div>
                 <div class="buttons">
                     <button class="button button1" id="vaciarCarrito">Vaciar carrito</button>
-                    <button class="button button2">Continuar Compra</button>
+                    <button class="button button2" id="btn-compra">Continuar Compra</button>
                 </div>
             </div>
 
@@ -149,6 +149,99 @@
                 </div>
             </section>
         </div>
+    </section>
+
+    <section class="section-formulario" id="section-formulario">
+        <!-- Crear un formulario de compra de productos -->
+        <div class="container-formulario">
+            <div class="header-formulario">
+                <div class="title">
+                    <h2 class="h2">Aldair</h2>
+                    <p class="frase">Vive la vida que amas. Ama la vida que vives</p>
+                    <div class="line"></div>
+                </div>
+                <div class="section-form">
+                    <p class="p">Estás comprando</p>
+                    <button class="btn-salir" title="Cerrar formulario" id="cerrarFormulario"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+            <form action="" id="formulario">
+                <div class="container-formulario">
+                    <div class="item-form">
+                        <label for="nombre" class="label">Nombre</label>
+                        <input type="text" name="nombre" id="nombre" class="input" placeholder="Nombre">
+                    </div>
+                    <div class="item-form">
+                        <label for="apellido" class="label">Apellido</label>
+                        <input type="text" name="apellido" id="apellido" class="input" placeholder="Apellido">
+                    </div>
+                    <div class="item-form">
+                        <label for="correo" class="label">Correo</label>
+                        <input type="email" name="correo" id="correo" class="input" placeholder="Correo">
+                    </div>
+                    <div class="item-form">
+                        <label for="telefono" class="label">Teléfono</label>
+                        <input type="tel" name="telefono" id="telefono" class="input" placeholder="Teléfono">
+                    </div>
+                    <div class="item-form">
+                        <label for="direccion" class="label">Dirección</label>
+                        <input type="text" name="direccion" id="direccion" class="input" placeholder="Dirección">
+                    </div>
+                    <div class="item-form">
+                        <label for="ciudad" class="label">Ciudad</label>
+                        <input type="text" name="ciudad" id="ciudad" class="input" placeholder="Ciudad">
+                    </div>
+                    <div class="item-form">
+                        <label for="estado" class="label">Estado</label>
+                        <input type="text" name="estado" id="estado" class="input" placeholder="Estado">
+                    </div>
+                    <div class="item-form">
+                        <label for="pais" class="label">País</label>
+                        <input type="text" name="pais" id="pais" class="input" placeholder="País">
+                    </div>
+                    <div class="item-form">
+                        <label for="codigo" class="label">Código Postal</label>
+                        <input type="text" name="codigo" id="codigo" class="input" placeholder="Código Postal">
+                    </div>
+                </div>
+                <div class="container-pago" id="pago">
+                    <div class="form-selects">
+                        <label for="metodo" class="label">Método de pago</label>
+                        <select name="metodo" id="metodo" class="input">
+                            <option value="">Selecciona un método de pago</option>
+                            <option value="1">Tarjeta de crédito</option>
+                            <option value="2">Paypal</option>
+                            <option value="3">Transferencia bancaria</option>
+                        </select>
+                    </div>
+                    <div class="container-items">
+                        <div class="item-form">
+                            <label for="tarjeta" class="label">Tarjeta de crédito</label>
+                            <input type="text" name="tarjeta" id="tarjeta" class="input" placeholder="Tarjeta de crédito">
+                        </div>
+                        <div class="item-form">
+                            <label for="cvv" class="label">CVV</label>
+                            <input type="text" name="cvv" id="cvv" class="input" placeholder="CVV">
+                        </div>
+                        <div class="item-form">
+                            <label for="mes" class="label">Mes</label>
+                            <input type="text" name="mes" id="mes" class="input" placeholder="Mes">
+                        </div>
+                        <div class="item-form">
+                            <label for="anio" class="label">Año</label>
+                            <input type="text" name="anio" id="anio" class="input" placeholder="Año">
+                        </div>
+                        <div class="item-form">
+                            <label for="codigo" class="label">Código de seguridad</label>
+                            <input type="text" name="codigo" id="codigo" class="input" placeholder="Código de seguridad">
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button class="btn-form btn-form__1" type="reset">Limpiar</button>
+                    <button class="btn-form btn-form__2" type="submit">Comprar</button>
+                </div>
+            </form>
     </section>
 
     <section class="section-novedades">

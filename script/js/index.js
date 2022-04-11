@@ -516,3 +516,14 @@ function mouse(param){
         cursorP(item);
     })
 }
+
+const btnCompra = document.getElementById('btn-compra');
+const formularioCompra = document.getElementById('section-formulario');
+const cerrarFormulario = document.getElementById('cerrar-formulario');
+
+btnCompra.addEventListener('click', () => {
+    formularioCompra.classList.add('active');
+})
+cerrarFormulario.addEventListener('click', () => {
+    formularioCompra.classList.remove('active');
+})

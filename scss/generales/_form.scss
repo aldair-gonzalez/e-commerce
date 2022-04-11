@@ -1,0 +1,215 @@
+.section-formulario{
+    background: rgba(0,0,0,0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    z-index: 111;
+    @include flex(column,nowrap,center,center);
+    transition: all .5s ease-in-out;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(-100%);
+    &.active{
+        pointer-events: auto;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .container-formulario{
+        width: 95%;
+        height: 90%;
+        overflow: scroll;
+        .header-formulario{
+            width: 100%;
+            @include flex(column,nowrap,center,center);
+            .title{
+                color: $blanco;
+                width: 100%;
+                text-align: center;
+                .h2{
+                    font: {
+                        family: $tipo-titular;
+                        weight: 300;
+                        size: 3em;
+                    }
+                }
+                .frase{
+                    font: {
+                        family: $tipo-principal;
+                        weight: 300;
+                        size: 2.5em;
+                    }
+                }
+                .line{
+                    background: $gris-claro;
+                    width: 90%;
+                    height: 1px;
+                    margin: .3rem auto;
+                }
+            }
+            .section-form{
+                color: $blanco;
+                width: 90%;
+                @include flex(row,nowrap,center,space-between);
+                .p{
+                    padding: 1rem;
+                    font: {
+                        family: $tipo-normal;
+                        weight: 300;
+                        size: 1.5em;
+                    }
+                }
+                .btn-salir{
+                    color: $blanco;
+                    cursor: none;
+                    padding: 0 1rem;
+                    font-size: 4rem;
+                }
+            }
+        }
+        #formulario{
+            width: 100%;
+            .container-formulario{
+                width: 60%;
+                margin: auto;
+                @include grid(2,1rem);
+                .item-form{
+                    width: 100%;
+                    @include flex(column,nowrap,center,center);
+                    .label{
+                        padding: 1rem;
+                        color: $blanco;
+                        font: {
+                            family: $tipo-normal;
+                            weight: 300;
+                            size: 1.2em;
+                        }
+                    }
+                    .input{
+                        background: rgba(255,255,255,0.2);
+                        color: $blanco;
+                        width: 90%;
+                        padding: 1rem;
+                        border-radius: .4rem;
+                        backdrop-filter: blur(10px);
+                        font: {
+                            family: $tipo-normal;
+                            weight: 300;
+                            size: 1.2em;
+                        }
+                        transition: all .3s ease;
+                        &:hover{
+                            backdrop-filter: blur(15px);
+                        }
+                        &::-webkit-input-placeholder {
+                            color: $gris-claro;
+                        }
+                        &:focus{
+                            color: $blanco;
+                            transform: translateY(-5%) scale(1.005);
+                            backdrop-filter: blur(20px);
+                        }
+                    }
+                }
+            }
+            .container-pago{
+                color: $blanco;
+                .form-selects{
+                    @include flex(row,nowrap,center,center);
+                    .label{
+                        padding: 1rem;
+                        font: {
+                            family: $tipo-normal;
+                            weight: 300;
+                            size: 1.2em;
+                        }
+                    }
+                    .input{
+                        padding: 1rem;
+                        &:focus{
+                            background: rgba(255,255,255,0.5);
+                            color: $negro;
+                            backdrop-filter: blur(10px);
+                        }
+                    }
+                }
+                .container-items{
+                    width: 60%;
+                    margin: auto;
+                    @include grid(2,1rem);
+                    .item-form{
+                        width: 100%;
+                        @include flex(column,nowrap,center,center);
+                        .label{
+                            padding: 1rem;
+                            color: $blanco;
+                            font: {
+                                family: $tipo-normal;
+                                weight: 300;
+                                size: 1.2em;
+                            }
+                        }
+                        .input{
+                            background: rgba(255,255,255,0.2);
+                            color: $blanco;
+                            width: 90%;
+                            padding: 1rem;
+                            border-radius: .4rem;
+                            backdrop-filter: blur(10px);
+                            font: {
+                                family: $tipo-normal;
+                                weight: 300;
+                                size: 1.2em;
+                            }
+                            transition: all .3s ease;
+                            &:hover{
+                                backdrop-filter: blur(15px);
+                            }
+                            &::-webkit-input-placeholder {
+                                color: $gris-claro;
+                            }
+                            &:focus{
+                                color: $blanco;
+                                transform: translateY(-5%) scale(1.005);
+                                backdrop-filter: blur(20px);
+                            }
+                        }
+                    }
+                }
+            }
+            .buttons{
+                width: 100%;
+                @include flex(row,nowrap,center,center);
+                .btn-form{
+                    color: $blanco;
+                    width: 20%;
+                    margin: 1rem .5rem;
+                    padding: 1rem;
+                    border-radius: .5rem;
+                    font: {
+                        family: $tipo-normal;
+                        weight: 400;
+                        size: 1.2em;
+                    }
+                    transition: all .3s ease-in-out;
+                    cursor: none;
+                    &__1{
+                        background: rgba(192, 0, 0, 0.904);
+                        &:hover{
+                            background: rgba(192, 0, 0, 0.575);
+                        }
+                    }
+                    &__2{
+                        background: rgb(0, 168, 14);
+                        &:hover{
+                            background: rgba(0, 168, 14, 0.5);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
