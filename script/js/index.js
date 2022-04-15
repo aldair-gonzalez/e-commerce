@@ -46,9 +46,6 @@ class Producto {
         this.info = info;
         this.cantidad = 1;
     }
-    addCantidad(){
-        return this.cantidad++;
-    }
 }
 
 
@@ -296,22 +293,29 @@ function addCarrito(){
     addCar.addEventListener('click', e => {
         let condition = carrito.find(producto => producto.id == e.target.id);
         if(condition){
-            condition.addCantidad();
+            Toastify({
+                text: `El producto ya existe en el carrito`,
+                duration: 3000,
+                gravity: "bottom",
+                style: {
+                    background: "#b40404"
+                }
+            }).showToast();
         } else{
             let condition = arrProductos.find(producto => producto.id == e.target.id);
             carrito.push(condition);
+            Toastify({
+                text: `Se añadió al carrito`,
+                duration: 3000,
+                gravity: "bottom",
+                style: {
+                    background: "#474747"
+                }
+            }).showToast();
         }
         pintarCarrito(carrito);
         pintarFooterCarrito();
         localStoraP();
-        Toastify({
-            text: `Se añadió al carrito`,
-            duration: 3000,
-            gravity: "bottom",
-            style: {
-                background: "#474747"
-            }
-        }).showToast();
     })
 }
 
@@ -329,82 +333,43 @@ function pintarCarrito(carrito){
                 <h3 class="nombre">${producto.producto}</h3>
             </div>
             <div class="cantidad">
-                <button class="button remove" id="${producto.id}remove">-</button>
                 <p class="input-cantidad" id="${producto.id}cantidad">${producto.cantidad}</p>
-                <button class="button add" id="${producto.id}add">+</button>
             </div>
             <div class="precio">
                 <p class="p total">$${producto.precio}</span></p>
                 <p class="p subtotal">$<span class="subTotal" id="${producto.id}subTotal">${producto.precio}</span></p>
             </div>
-            <button class="delete" title="Eliminar producto del carrito" id="${producto.id}delete"><i class="fas fa-trash-alt"></i></button>
+            <button class="delete" title="Eliminar producto del carrito" id="${producto.id}"><i class="fas fa-trash-alt"></i></button>
         `;
         containerCardsCarrito.append(cardCarrito);
-        cantidad(producto);
         pintarFooterCarrito();
+        cantidad();
+        console.log(carrito);
     }
 }
 
-function cantidad(data) {
-    const add = document.getElementById(`${data.id}add`);
-    const remove = document.getElementById(`${data.id}remove`);
-    const pCantidad = document.getElementById(`${data.id}cantidad`);
-    const subTotal = document.getElementById(`${data.id}subTotal`);
-    const cardProductoCarrito = document.getElementById(`${data.id}cardProducto`);
-    const eliminar = document.getElementById(`${data.id}delete`);
-    pintarFooterCarrito();
-
-    function eliminarProducto(){
-        data.cantidad = 0;
-        if (data.cantidad == 0 && data.cantidad < 1) {
-            let index = carrito.indexOf()
-            carrito.splice(index, 1);
-        }
-    }
-
-    eliminar.addEventListener('click', () => {
-        cardProductoCarrito.remove();
-        eliminarProducto();
-        carritoVacioNot();
-        localStoraP();
-        pintarFooterCarrito();
-        carrito.length <= 0 ? footerCarrito.classList.remove('active') : null;
-    })
-
-
-    let opSubPrecio = data.cantidad * data.precio;
-    subTotal.innerHTML = opSubPrecio;
-
-    add.addEventListener('click', () => {
-        opCantidad = (data.cantidad++) + 1;
-        opSubPrecio = opCantidad * data.precio;
-        pCantidad.innerHTML = opCantidad;
-        subTotal.innerHTML = opSubPrecio;
-        localStoraP();
-        pintarFooterCarrito();
-    })
-    remove.addEventListener('click', () => {
-        opCantidad = (data.cantidad--) - 1;
-        opSubPrecio = opCantidad * data.precio;
-        pCantidad.innerHTML = opCantidad;
-        subTotal.innerHTML = opSubPrecio;
-        pintarFooterCarrito();
-
-        if (pCantidad.innerHTML < '1') {
-            cardProductoCarrito.remove();
-            eliminarProducto();
+function cantidad() {
+    const eliminar = document.getElementsByClassName('delete');
+    for (const item of eliminar) {
+        item.addEventListener('click', e => {
+            let id = e.target.id;
+            // Eliminar solo el producto del id que selecciono
+            carrito = carrito.filter(producto => producto.id != id);
+            localStoraP();
+            pintarCarrito(carrito);
             pintarFooterCarrito();
-        }
-        carritoVacioNot();
-        localStoraP();
-    })
+            carritoVacioNot();
+        })
+    }
 }
 
 if ('productosCarrito' in localStorage) {
     pintarFooterCarrito();
     const produGuardados = JSON.parse(localStorage.getItem('productosCarrito'));
     for (const producto of produGuardados) {
-        carrito.push(producto);
+        carrito.push(
+            new Producto(producto.producto, producto.id, producto.precio, producto.imagen, producto.categoria, producto.subCategoria, producto.ventas, producto.info)
+        );
     }
     pintarCarrito(carrito);
 }
@@ -519,11 +484,16 @@ function mouse(param){
 
 const btnCompra = document.getElementById('btn-compra');
 const formularioCompra = document.getElementById('section-formulario');
-const cerrarFormulario = document.getElementById('cerrar-formulario');
+const cerrarFormulario = document.getElementById('cerrarFormulario');
 
 btnCompra.addEventListener('click', () => {
     formularioCompra.classList.add('active');
 })
 cerrarFormulario.addEventListener('click', () => {
     formularioCompra.classList.remove('active');
+})
+
+const btnComprarForm = document.getElementById('btnComprarForm');
+btnComprarForm.addEventListener('click', () => {
+    localStorage.removeItem('productosCarrito');
 })

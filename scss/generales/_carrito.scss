@@ -173,6 +173,9 @@
                     right: 1rem;
                     font-size: 2rem;
                     cursor: none;
+                    i{
+                        pointer-events: none;
+                    }
                 }
             }
         }
